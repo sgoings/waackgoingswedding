@@ -46,6 +46,8 @@ gem 'rails_12factor'
 # Enable New Relic
 gem 'newrelic_rpm'
 
+gem 'rake', group: :test
+
 # Use Capistrano for deployment
 # gem 'capistrano', group: :development
 

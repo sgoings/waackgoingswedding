@@ -1,0 +1,11 @@
+language: ruby
+rvm:
+  - "2.0.0"
+
+deploy:
+  provider: heroku
+  api_key:
+    secure: JZgdXkpYv8qa6CFwXkc0PwQg35K9Esu/+5k8xMkq4Be9wITBZ/CEr8ZDC5J+zk3ODBNzQ/sO9X5i5mwkKzt8mZya1NFzA/A++Bg/R3FbKstYUFksWC33O/r3KQ4vVf/WNX7sjb++xy7EKJ68W4RkVzsZSJA4z8GBn3EgX3qroXk=
+  app: waackgoingswedding
+  on:
+    repo: sgoings/waackgoingswedding
