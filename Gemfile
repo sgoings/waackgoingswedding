@@ -43,6 +43,9 @@ gem 'unicorn'
 # Enable heroku features
 gem 'rails_12factor'
 
+# Enable New Relic
+gem 'newrelic_rpm'
+
 # Use Capistrano for deployment
 # gem 'capistrano', group: :development
 
