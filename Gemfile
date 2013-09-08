@@ -46,10 +46,10 @@ gem 'rails_12factor'
 # Enable New Relic
 gem 'newrelic_rpm'
 
-gem 'rake', group: :test
+group :development, :test do
+  gem 'rake'
+  gem 'unicorn-rails'
+# gem 'capistrano'
+# gem 'debugger'
+end
 
-# Use Capistrano for deployment
-# gem 'capistrano', group: :development
-
-# Use debugger
-# gem 'debugger', group: [:development, :test]
