@@ -40,6 +40,9 @@ end
 # Use unicorn as the app server
 gem 'unicorn'
 
+# Enable heroku features
+gem rails_12factor
+
 # Use Capistrano for deployment
 # gem 'capistrano', group: :development
 
