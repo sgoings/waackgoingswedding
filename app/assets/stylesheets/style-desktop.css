@@ -66,6 +66,7 @@
 }
 
 #header nav .active {
+	color: #f6f8f8;
 }
 
 /* Banner */
@@ -85,6 +86,10 @@
 	overflow: hidden;
 	padding: 50px 0px;
 	background: #999999;
+}
+
+#feature-wrapper a {
+	color: #000000;
 }
 
 #feature-content {
@@ -157,10 +162,6 @@
 	text-shadow: 1px 1px 0px rgba(0,0,0,.5);
 	color: #FFFFFF;
 }
-
-/*#copyright a {
-	color: #4B4341;
-}*/
 
 /* One Column content */
 
