@@ -52,11 +52,3 @@ test:
   pool: 5
   username: waackgoingswedding
   password: lafayettewedding2014
-
-production:
-  adapter: postgresql
-  encoding: unicode
-  database: waackgoingswedding_production
-  pool: 5
-  username: waackgoingswedding
-  password:

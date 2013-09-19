@@ -11,6 +11,11 @@ Waackgoingswedding::Application.routes.draw do
   # Example of named route that can be invoked with purchase_url(id: product.id)
   #   get 'products/:id/purchase' => 'catalog#purchase', as: :purchase
 
+  root :to => 'high_voltage/pages#show', id: 'home'
+  get 'pages/home' => 'high_voltage/pages#show', id: 'home'
+  get 'pages/story' => 'high_voltage/pages#show', id: 'story'
+  get 'pages/events' => 'high_voltage/pages#show', id: 'events'
+
   # Example resource route (maps HTTP verbs to controller actions automatically):
   #   resources :products
 

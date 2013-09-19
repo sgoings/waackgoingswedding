@@ -1,0 +1,22 @@
+<div id="header-wrapper">
+  <header id="header" class="5grid-layout">
+    <div class="row">
+      <div class="12u" id="logo">
+        <h1>
+          <%= link_to 'brittany and seth', page_path('home'), { :class => "mobileUI-site-name" } %>
+        </h1>
+      </div>
+    </div>
+    <div class="row">
+      <div class="12u">
+        <nav class="mobileUI-site-nav">
+          <%= link_to 'Home', page_path('home') %>
+          <%= link_to 'Story', page_path('story') %>
+          <%= link_to 'Events', page_path('events') %>
+          <%= link_to 'Accomodations', page_path('accomodations') %>
+          <%= link_to 'RSVP', page_path('rsvp') %>
+        </nav>
+      </div>
+    </div>
+  </header>
+</div>
