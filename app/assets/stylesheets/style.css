@@ -42,6 +42,14 @@ p {
 	line-height: 160%;
 }
 
+p.bold {
+	font-weight: bold;
+}
+
+.center {
+	text-align: center;
+}
+
 
 strong {
 	font-weight: 700;

@@ -113,6 +113,10 @@
 	background: #999999;
 }
 
+#twocolumn a {
+	color: #000000;
+}
+
 
 /* Page Wrapper */
 
@@ -157,6 +161,7 @@
 }
 
 #copyright p {
+	font-size: 11pt;
 	line-height: 100px;
 	text-align: center;
 	text-shadow: 1px 1px 0px rgba(0,0,0,.5);
