@@ -1,0 +1,23 @@
+<div id="feature-wrapper">
+  <div class="12u">
+    <div id="onecolumn-content" class="5grid-layout" style="text-align: center">
+      <div class="row">
+        <div class="12u" class="mobileUI-main-content">
+          <section>
+            
+            <% if flash[:search_status] %>
+              <div class="notice"><%= flash[:search_status] %></div><br/>
+            <% end %>
+
+            <%= form_tag({controller: "people", action: "index"}, method: "get") do %>
+              <%= label_tag(:address, "Enter your address (as shown on invitation):") %>
+              <%= text_field_tag(:address) %>
+              <%= submit_tag("Search") %>
+            <% end %>
+
+          </section>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

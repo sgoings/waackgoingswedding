@@ -1,9 +1,17 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
 
 one:
+  id: 1
   name: MyString
-  token: MyString
+  address: MyString
+  city: MyString
+  state: MyString
+  attend: false
 
 two:
+  id: 1
   name: MyString
-  token: MyString
+  address: MyString
+  city: MyString
+  state: MyString
+  attend: false
