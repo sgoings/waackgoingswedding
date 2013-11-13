@@ -4,7 +4,41 @@
       <div class="row">
         <div class="12u" style="text-align: center">
           <section>
-            <%= image_tag 'river_background_gray.jpg' %>
+            <div class="container">
+              <div id="slides">
+                <%= image_tag 'sethandbrittany-109.jpg' %>
+                <%= image_tag 'sethandbrittany-120.jpg' %>
+                <%= image_tag 'sethandbrittany-142.jpg' %>
+                <%= image_tag 'sethandbrittany-21.jpg' %>
+              </div>
+            </div>
+
+            <script>
+              $(function() {
+                $('#slides').slidesjs({
+                  width: 800,
+                  height: 533,
+                  navigation: {
+                    effect: "fade"
+                  },
+                  pagination: {
+                    effect: "fade"
+                  },
+                  effect: {
+                    fade: {
+                      speed: 800
+                    }
+                  },
+                  play: {
+                    active: true,
+                    auto: true,
+                    interval: 5000,
+                    swap: true,
+                    effect: "fade"
+                  }
+                });
+              });
+            </script>
           </section>
         </div>
       </div>
