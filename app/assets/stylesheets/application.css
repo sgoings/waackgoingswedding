@@ -11,10 +11,10 @@
  *= require_self
  */
 
-//= require slides
 //= require ./5grid/core
 //= require ./5grid/core-desktop
 //= require ./5grid/core-1200px
 //= require ./5grid/core-noscript
 //= require style
 //= require style-desktop
+//= require slides

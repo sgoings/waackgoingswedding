@@ -48,6 +48,8 @@ gem 'rails_12factor'
 # Enable New Relic
 gem 'newrelic_rpm'
 
+gem 'slidesjs-rails'
+
 group :development, :test do
   gem 'rake'
   gem 'unicorn-rails'
