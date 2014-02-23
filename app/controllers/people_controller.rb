@@ -19,6 +19,6 @@ class PeopleController < ApplicationController
 
   private
     def people_params
-      params.require(:people).permit(:attend)
+      params.require(:people).permit(:attend, :email, :actual_adults, :actual_kids)
     end
 end

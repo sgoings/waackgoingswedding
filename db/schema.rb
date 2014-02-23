@@ -21,6 +21,13 @@ ActiveRecord::Schema.define(version: 20130929052636) do
       t.string :address
       t.string :city
       t.string :state
+      t.string :zip
+      t.integer :total
+      t.integer :orig_adults
+      t.integer :actual_adults
+      t.integer :orig_kids
+      t.integer :actual_kids
+      t.string :email
       t.boolean :attend
 
       t.timestamps

@@ -9,46 +9,53 @@
 
               <%= form_for(@person) do |f| %>
 
-              <h3>RSVP Details</h3><br/>
+                <h3>RSVP Details</h3><br/>
 
-              <table style="margin: auto">
+                <!-- RSVP Info -->
+                <p><%= @person.name %></p>
+                <p><%= @person.address %></p>
+                <p><%= @person.city %>, <%= @person.state %>, <%= @person.zip %></p></br>
 
-                <tr>
-                  <td><%= f.label :name %></td>
-                  <td><%= f.text_field :name, disabled: true %></td>
-                </tr>
+                <!-- Adults -->
+                <p>
+                  <%
+                    adult_hash=[]
+                    0.upto(@person.orig_adults) { |i| adult_hash[i] = i }
+                  %>
 
-                <tr>
-                  <td><%= f.label :address %></td>
-                  <td><%= f.text_field :address, disabled: true %></td>
-                </tr>
+                  Adults: <%= f.select :actual_adults, adult_hash %>
+                </p>
 
-                <tr>
-                  <td><%= f.label :city %></td>
-                  <td><%= f.text_field :city, disabled: true %></td>
-                </tr>
+                <!-- Kids -->
+                <%
+                  if !@person.orig_kids.nil?
+                    kid_hash=[]
+                    0.upto(@person.orig_kids) { |i| kid_hash[i] = i }
+                %>
+                  <p>
+                    Kids: <%= f.select :actual_kids, kid_hash %>
+                  </p>
+                <% end %>
 
-                <tr>
-                  <td><%= f.label :state %></td>
-                  <td><%= f.text_field :state, disabled: true %></td>
-                </tr>
+                <!-- Attending -->
+                <br/>
+                <p>
+                  <%= f.check_box :attend %> Attending
+                </p>
 
-                <tr>
-                  <td><%= f.label :attend %></td>
-                  <td><%= f.check_box :attend %></td>
-                </tr>             
+                <p>
+                  Email (optional): <%= f.text_field :email %>
+                </p>
 
-                <tr>
-                  <td colspan="2"><%= f.submit "Update" %></td>
-                </tr>
+                <br/>
+                <p><%= f.submit "Update" %></p>
 
-              </table>
+              <% end %>
 
-            <% end %>
             <% end %>
 
             <% if flash[:update_status] %>
-              <div class="notice"><%= flash[:update_status] %></div><br/>
+              <br/><div class="notice"><%= flash[:update_status] %></div>
             <% end %>
 
           </section>

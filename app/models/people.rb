@@ -8,10 +8,10 @@ class People < ActiveRecord::Base
     if address && !address.empty?
       people = find(:all, :conditions => ['lower(address) LIKE ?', "%#{address.downcase}%"])
       if people.length == 1
-        return people
+        return people.first
       end
-      return nil
 
+      return nil
     end
   end
 
