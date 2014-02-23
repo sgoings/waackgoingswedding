@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <h1>Thanks for RSVP-ing for Seth and Brittany's Wedding!</h1>
+
+    <h3>RSVP Details</h3><br/>
+
+    <p><%= @person.name %></p>
+    <p><%= @person.address %></p>
+    <p><%= @person.city %>, <%= @person.state %>, <%= @person.zip %></p></br>
+
+    <% if(@person.attend) %>
+        <p>Attending: Yep.</p>
+        <p>Adults: <%= @person.actual_adults %></p>
+        <p>Kids: <%= @person.actual_kids %></p>
+    <% else %>
+        <p>Attending: Nope.</p>
+    <% end %>
+
+    <p>To update your RSVP further, go here: <%= @url %></p>
+  </body>
+</html>
