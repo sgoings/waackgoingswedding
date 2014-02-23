@@ -6,7 +6,7 @@ class People < ActiveRecord::Base
 
   def self.search_by_address(address)
     if address && !address.empty?
-      people = find(:all, :conditions => ['lower(address) LIKE ?', "%#{address.downcase}%"])
+      people = People.search(:address => address.downcase)
       if people.length == 1
         return people.first
       end

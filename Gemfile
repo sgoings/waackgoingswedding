@@ -50,6 +50,8 @@ gem 'newrelic_rpm'
 
 gem 'slidesjs-rails'
 
+gem 'texticle', "2.0", :require => 'texticle/rails'
+
 group :development, :test do
   gem 'rake'
   gem 'unicorn-rails'

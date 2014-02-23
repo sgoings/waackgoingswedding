@@ -10,10 +10,19 @@
             <% end %>
 
             <%= form_tag({controller: "people", action: "index"}, method: "get") do %>
-              <%= label_tag(:address, "Enter your address (as shown on invitation):") %>
-              <%= text_field_tag(:address) %>
-              <%= submit_tag("Search") %>
+              <p><%= label_tag(:address, "Enter your address:") %></p>
+              <p><%= text_field_tag(:address) %>
+              <%= submit_tag("Search") %></p>
             <% end %>
+
+            <br/>
+            <p>Some tips if you're having trouble:</p>
+            <ul>
+              <li>Enter as written on your envelope, or...</li>
+              <li>Enter your house number, or...</li>
+              <li>Call: (303) 862-0491</li>
+              <li>Email: <a href="mailto:sethgoings@gmail.com">sethgoings@gmail.com</li>
+            </ul>
 
           </section>
         </div>
