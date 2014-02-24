@@ -15,7 +15,3 @@ csv.each do |row|
   person_hash['attend'] = false
   People.create(person_hash)
 end
-
-# People.create(name: "Seth Goings", address: "7816 Marshall St", city: 'Arvada', state: 'CO', attend: false)
-# People.create(name: "Mollie Goings", address: "Some address", city: 'Broomfield', state: 'CO', attend: false)
-# People.create(name: "Brittany Waack", address: "Some other address", city: 'Fort Collins', state: 'CO', attend: false)
