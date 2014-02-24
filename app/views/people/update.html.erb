@@ -1,15 +1,18 @@
 <div id="feature-wrapper">
   <div class="12u">
-    <div id="onecolumn-content" class="5grid-layout" style="text-align: center">
+    <div id="onecolumn-content" class="5grid-layout">
       <div class="row">
-        <div class="12u" class="mobileUI-main-content">
+        <div class="5u">
+          &nbsp;
+        </div>
+        <div class="3u">
           <section>
 
               <% if @person %>
 
               <%= form_for(@person) do |f| %>
 
-                <h3>RSVP Details</h3><br/>
+                <h2>RSVP Details</h2><br/>
 
                 <!-- RSVP Info -->
                 <p><%= @person.name %></p>
@@ -23,7 +26,7 @@
                     0.upto(@person.orig_adults) { |i| adult_hash[i] = i }
                   %>
 
-                  Adults: <%= f.select :actual_adults, adult_hash %>
+                  <%= f.select :actual_adults, adult_hash %> Adult(s)
                 </p>
 
                 <!-- Kids -->
@@ -33,19 +36,24 @@
                     0.upto(@person.orig_kids) { |i| kid_hash[i] = i }
                 %>
                   <p>
-                    Kids: <%= f.select :actual_kids, kid_hash %>
+                    <%= f.select :actual_kids, kid_hash %> Kid(s)
                   </p>
                 <% end %>
 
                 <!-- Attending -->
                 <br/>
                 <p>
-                  <%= f.check_box :attend %> Attending
-                </p>
+                  <%= f.radio_button(:attend, "true") %>
+                  <%= f.label(:attend_true, "Will attend") %><br/>
+                  <%= f.radio_button(:attend, "false") %>
+                  <%= f.label(:age_adult, "Unable to attend") %>
+                </p><br/>
 
-                <p>
-                  Email (optional): <%= f.text_field :email %>
-                </p>
+                <p>Dietary Restrictions (optional)</p>
+                <p><%= f.text_area :dietary %></p>
+
+                <p>Email (optional):</p>
+                <p><%= f.text_field :email %></p>
 
                 <br/>
                 <p><%= f.submit "Update" %></p>

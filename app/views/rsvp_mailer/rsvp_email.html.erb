@@ -16,10 +16,11 @@
         <p>Attending: Yep.</p>
         <p>Adults: <%= @person.actual_adults %></p>
         <p>Kids: <%= @person.actual_kids %></p>
+        <p>Dietary Restrictions: <%= @person.dietary %></p>
     <% else %>
         <p>Attending: Nope.</p>
     <% end %>
-
+    <br/>
     <p>To update your RSVP further, go here: <%= @url %></p>
   </body>
 </html>

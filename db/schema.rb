@@ -29,6 +29,7 @@ ActiveRecord::Schema.define(version: 20130929052636) do
       t.integer :actual_kids
       t.string :email
       t.boolean :attend
+      t.string :dietary
 
       t.timestamps
     end

@@ -144,3 +144,7 @@ hr {
 	width: 100%;
 	display: block;
 }
+
+.notice {
+  font-weight: bold;
+}
