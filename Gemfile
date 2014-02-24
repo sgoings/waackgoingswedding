@@ -52,6 +52,8 @@ gem 'slidesjs-rails'
 
 gem 'texticle', "2.0", :require => 'texticle/rails'
 
+gem 'taps'
+
 group :development, :test do
   gem 'rake'
   gem 'unicorn-rails'
