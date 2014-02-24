@@ -6,7 +6,7 @@ class PeopleController < ApplicationController
     if !params[:address].empty? && @person
       redirect_to @person
     else
-      flash[:search_status] = "Could not find address. Try again?"
+      flash[:search_status] = "Couldn't find that address - try again?"
       render "search"
     end
   end

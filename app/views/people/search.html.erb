@@ -5,10 +5,6 @@
         <div class="4u">&nbsp;</div>
         <div class="6u">
           <section>
-            
-            <% if flash[:search_status] %>
-              <div class="notice"><%= flash[:search_status] %></div><br/>
-            <% end %>
 
             <%= form_tag({controller: "people", action: "index"}, method: "get") do %>
               <h2><%= label_tag(:address, "Enter your address") %></h2>
@@ -16,13 +12,19 @@
               <%= submit_tag("Search") %></p>
             <% end %>
 
+            <% if flash[:search_status] %>
+              <br/><div class="notice"><%= flash[:search_status] %></div>
+            <% end %>
+
             <br/><br/>
             <h3>Tips:</h3>
             <ul>
-              <li>Enter as written on your envelope, or...</li>
-              <li>Use words for any street name lower than 50 (511 fifth, not 511 5th), or...</li>
-              <li>Leave a voicemail: (720) 340-1417, or...</li>
-              <li>RSVP via email: <a href="mailto:sethgoings@gmail.com">sethgoings@gmail.com</li>
+              <li>Enter address as written on your envelope</li>
+              <li>Try just house number and street name (511 fifth)</li>
+              <li>Use words for any street name lower than 50 (511 fifth, not 511 5th)</li>
+              <li>Spell out "street", "avenue", etc.</li>
+              <li>Leave a voicemail: (720) 340-1417</li>
+              <li>Email: <a href="mailto:sethgoings@gmail.com">sethgoings@gmail.com</li>
             </ul>
 
           </section>
