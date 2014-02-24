@@ -11,14 +11,18 @@
     <%= @person.city %>, <%= @person.state %>, <%= @person.zip %></p><br/>
 
     <% if(@person.attend) %>
-    <ul>
-        <li><b>Attending.</b></li>
-        <li>Adults: <b><%= @person.actual_adults %></b></li>
+    <p>
+        <b>Attending</b><br/>
+        Adult(s): <b><%= @person.actual_adults %></b><br/>
         <% if(@person.actual_kids) %>
-        <li>Kids: <b><%= @person.actual_kids %></b></li>
+        Kid(s): <b><%= @person.actual_kids %></b><br/>
         <% end %>
-        <li>Dietary Restrictions: <%= if(@person.dietary) then @person.dietary else "None" end %></li>
-    </ul>
+        <% if(@person.dietary) %>
+        Dietary Restrictions: <%= @person.dietary %><br/>
+        <% else %>
+        No dietary restrictions<br/>
+        <% end %>
+    </p>
     <% else %>
         <p><b>Not Attending</b></p>
     <% end %>
