@@ -4,21 +4,23 @@
     <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
   </head>
   <body>
-    <h1>Thanks for RSVP-ing for Seth and Brittany's Wedding!</h1>
+    <h1>Thanks for RSVP-ing for Seth and Brittany's Wedding!</h1><br/>
 
-    <h3>RSVP Details</h3><br/>
-
-    <p><%= @person.name %></p>
-    <p><%= @person.address %></p>
-    <p><%= @person.city %>, <%= @person.state %>, <%= @person.zip %></p></br>
+    <p><%= @person.name %><br/>
+    <%= @person.address %><br/>
+    <%= @person.city %>, <%= @person.state %>, <%= @person.zip %></p><br/>
 
     <% if(@person.attend) %>
-        <p>Attending: Yep.</p>
-        <p>Adults: <%= @person.actual_adults %></p>
-        <p>Kids: <%= @person.actual_kids %></p>
-        <p>Dietary Restrictions: <%= @person.dietary %></p>
+    <ul>
+        <li><b>Attending.</b></li>
+        <li>Adults: <b><%= @person.actual_adults %></b></li>
+        <% if(@person.actual_kids) %>
+        <li>Kids: <b><%= @person.actual_kids %></b></li>
+        <% end %>
+        <li>Dietary Restrictions: <%= if(@person.dietary) then @person.dietary else "None" end %></li>
+    </ul>
     <% else %>
-        <p>Attending: Nope.</p>
+        <p><b>Not Attending</b></p>
     <% end %>
     <br/>
     <p>To update your RSVP further, go here: <%= @url %></p>
