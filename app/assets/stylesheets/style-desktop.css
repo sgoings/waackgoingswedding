@@ -84,7 +84,7 @@
 
 #feature-wrapper {
 	overflow: hidden;
-	padding: 50px 0px;
+	padding: 20px 0px 20px 0px;
 	background: #999999;
 }
 
@@ -117,14 +117,23 @@
 	color: #000000;
 }
 
+#twocolumn h3 {
+	padding: 20px 0px 10px;
+}
+
 
 /* Page Wrapper */
 
 #page-wrapper {
 	overflow: hidden;
-	padding: 50px 0px;
+	padding: 20px 0px 20px 0px;
 	background: #262626;
 	color: #FFFFFF;
+}
+
+#page-wrapper h2 {
+	padding: 20px 0px 20px 0px;
+	text-align: center;
 }
 
 #page h2 {

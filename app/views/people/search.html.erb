@@ -1,13 +1,11 @@
-<div id="feature-wrapper">
+<div id="page-wrapper">
   <div class="12u">
     <div id="onecolumn-content" class="5grid-layout">
       <div class="row">
-        <div class="4u">&nbsp;</div>
-        <div class="6u">
-          <section>
-
+        <div class="12u">
+          <section class="center">
+            <h2>RSVP By Address:</h2>
             <%= form_tag({controller: "people", action: "index"}, method: "get") do %>
-              <h2><%= label_tag(:address, "Enter your address") %></h2>
               <p><%= text_field_tag(:address) %>
               <%= submit_tag("Search") %></p>
             <% end %>
@@ -15,18 +13,31 @@
             <% if flash[:search_status] %>
               <br/><div class="notice"><%= flash[:search_status] %></div>
             <% end %>
-
-            <br/><br/>
+          </section>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div id="feature-wrapper">
+  <div class="12u">
+    <div id="onecolumn-content" class="5grid-layout">
+      <div class="row">
+        <div class="12u">
+          <section class="center">
             <h3>Tips:</h3>
             <ul>
               <li>Enter address as written on your envelope</li>
               <li>Try just house number and street name (511 fifth)</li>
               <li>Use words for any street name lower than 50 (511 fifth, not 511 5th)</li>
               <li>Spell out "street", "avenue", etc.</li>
-              <li>Leave a voicemail: (720) 340-1417</li>
-              <li>Email: <a href="mailto:sethgoings@gmail.com">sethgoings@gmail.com</li>
             </ul>
-
+            <br/>
+            <h3>Voicemail:</h3>
+              <p>(720) 340-1417</p>
+            <br/>
+            <h3>Email:</h3>
+              <p><a href="mailto:sethgoings@gmail.com">sethgoings@gmail.com</a></p>
           </section>
         </div>
       </div>
