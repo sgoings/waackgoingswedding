@@ -1,7 +1,5 @@
 Waackgoingswedding::Application.routes.draw do
-  resources :people
-
-  get "rsvp", to: "people#search"
+  resources :people, :id => /.*/
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
@@ -19,6 +17,7 @@ Waackgoingswedding::Application.routes.draw do
   get 'pages/home' => 'high_voltage/pages#show', id: 'home'
   get 'pages/story' => 'high_voltage/pages#show', id: 'story'
   get 'pages/events' => 'high_voltage/pages#show', id: 'events'
+  get "rsvp", to: "people#search"
 
   # Example resource route (maps HTTP verbs to controller actions automatically):
   #   resources :products
