@@ -11,6 +11,6 @@ class RsvpMailer < ActionMailer::Base
     end
 
     logger.info emails
-    mail(to: emails, bcc: "brittany.waack@gmail.com", subject: 'Thanks for RVSVP-ing at waackgoingswedding.com!')
+    mail(to: emails, bcc: "brittany.waack@gmail.com", subject: 'Thanks for RSVP-ing at waackgoingswedding.com!')
   end
 end
